@@ -6,7 +6,6 @@ from typing import List, Dict, Optional
 
 def optimize_algorithm(data: List[Dict]) -> List[Dict]:
     """Optimized version with better performance"""
-    # Use list comprehension for better performance
     return [
         {**item, 'processed': True}
         for item in data
