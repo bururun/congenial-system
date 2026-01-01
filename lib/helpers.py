@@ -1,130 +1,21 @@
-# Helper functions
+"""
+Congenial System - Bug Fix
+"""
 
-def helper_function_3(x):
-    """Helper function for iteration 3."""
-    return x * 3
+def safe_divide(a, b):
+    """Safely divide two numbers with error handling"""
+    if b == 0:
+        raise ValueError("Division by zero is not allowed")
+    return a / b
 
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_18(x):
-    """Helper function for iteration 18."""
-    return x * 18
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_19(x):
-    """Helper function for iteration 19."""
-    return x * 19
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_22(x):
-    """Helper function for iteration 22."""
-    return x * 22
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_25(x):
-    """Helper function for iteration 25."""
-    return x * 25
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_28(x):
-    """Helper function for iteration 28."""
-    return x * 28
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_35(x):
-    """Helper function for iteration 35."""
-    return x * 35
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_38(x):
-    """Helper function for iteration 38."""
-    return x * 38
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_47(x):
-    """Helper function for iteration 47."""
-    return x * 47
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_49(x):
-    """Helper function for iteration 49."""
-    return x * 49
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_50(x):
-    """Helper function for iteration 50."""
-    return x * 50
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
-
-
-# Helper functions
-
-def helper_function_74(x):
-    """Helper function for iteration 74."""
-    return x * 74
-
-def format_output(data):
-    """Format output data."""
-    return str(data).upper()
+def parse_config(config_str):
+    """Parse configuration string with improved error handling"""
+    if not config_str:
+        return {}
+    
+    try:
+        import json
+        return json.loads(config_str)
+    except json.JSONDecodeError as e:
+        print(f"Warning: Invalid JSON config: {e}")
+        return {}
