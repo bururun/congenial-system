@@ -29,3 +29,14 @@ def helper_function_19(x):
 def format_output(data):
     """Format output data."""
     return str(data).upper()
+
+
+# Helper functions
+
+def helper_function_22(x):
+    """Helper function for iteration 22."""
+    return x * 22
+
+def format_output(data):
+    """Format output data."""
+    return str(data).upper()
